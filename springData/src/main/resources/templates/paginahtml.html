@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <title>A ver que se cuece</title>
+</head>
+<body>
+    <h1>Titulo HTML</h1>
+    <p>Bienvenido a la implementación de Thymeleaf</p>
+    <p th:text="'Holaaaaaaaa ' + ${name} + '!!!! '"/>
+
+    <table>
+        <th:block th:each="per:${personas}">
+            <tr>
+                <td th:text="${per.idPersona}"></td>
+                <td th:text="${per.nombre}"></td>
+            </tr>
+        </th:block>
+    </table>
+</body>
+</html>
